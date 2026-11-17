@@ -126,6 +126,15 @@ p { margin: 0 0 1rem; }
   text-shadow: 0 0 3px #fff, 0 0 10px var(--pink), 0 0 26px var(--pink), 0 0 60px rgba(255, 111, 174, 0.55);
   animation-delay: 2.5s;
 }
+.neon--gold {
+  color: #fff3d6;
+  text-shadow: 0 0 3px #fff, 0 0 10px #ffd36b, 0 0 24px #e8a93a, 0 0 54px rgba(232, 169, 58, 0.55);
+  animation-delay: 4s;
+}
+.neon-title { font-size: clamp(3rem, 2rem + 5vw, 5.6rem); margin: 0.2rem 0 1rem; }
+.neon-sign { font-size: clamp(2.4rem, 1.6rem + 3.5vw, 4rem); margin: 0 0 1.25rem; }
+.neon-section { font-size: clamp(2.4rem, 1.7rem + 3.5vw, 4.2rem); margin: 0 0 0.5rem; }
+
 @keyframes hum {
   0%, 18%, 22%, 62%, 64%, 100% { opacity: 1; }
   20% { opacity: 0.55; }
@@ -169,7 +178,7 @@ p { margin: 0 0 1rem; }
 }
 
 .page-hero { padding-block: clamp(2rem, 5vw, 4rem) 1.5rem; }
-.page-hero h1 {
+.page-hero h1:not(.neon) {
   font-family: var(--display); font-size: clamp(2.4rem, 1.6rem + 3.5vw, 4.4rem); margin: 0 0 0.75rem;
   color: var(--heading); text-shadow: var(--heading-glow);
 }
