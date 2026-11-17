@@ -106,7 +106,7 @@ p { margin: 0 0 1rem; }
    -------------------------------------------------------------------------- */
 .neon {
   font-family: var(--script); font-weight: 400; color: #ffe9d8; margin: 0;
-  font-size: clamp(4rem, 2.5rem + 8vw, 8.5rem); line-height: 0.95;
+  font-size: clamp(3.4rem, 2rem + 7vw, 7.5rem); line-height: 0.95;
   text-shadow:
     0 0 3px #fff4ea,
     0 0 10px var(--neon),
