@@ -16,7 +16,7 @@
   --pink: #ff6fae;          /* neon pink accent */
   --brass: #c9a24a;         /* brass frames */
   --brass-dark: #7d6127;
-  --copper: #c27a4a;
+  --copper: #dc9462;
   --teal: #5fbfb3;          /* peacock accent */
   --link: #ffb37a;
   --focus: #7fe0ff;
@@ -201,7 +201,7 @@ p { margin: 0 0 1rem; }
 .frame--velvet {
   background:
     radial-gradient(120% 90% at 30% 10%, rgba(255, 255, 255, 0.10), transparent 60%),
-    linear-gradient(160deg, var(--velvet) 0%, var(--velvet-deep) 100%);
+    linear-gradient(160deg, var(--velvet) 0%, #c86a26 100%);
   color: #1d0f06;
 }
 .frame--velvet a { color: #2a1206; font-weight: 600; }
