@@ -5,7 +5,7 @@ This site was made with the Educators Who Build tutorial "professional-website".
 ## What it is
 A personal professional website for Mary Flaherty, Associate Professor of Speech and Hearing Science at the University of Illinois Urbana-Champaign, director of the Child Speech Research Lab. Audience: a broad audience of intellectually curious people, not only specialists. Visitors should understand what she works on and why it matters across teaching, research, and personal interests (live music, reading, making art). Written in the first person.
 
-Look and feel: "moody maximalism", modeled on a reference room photo — dark charcoal walls, burnt-orange velvet, neon signs, brass/copper, a gallery wall of frames, sparkles of pattern. Keep text readable.
+Look and feel: "moody maximalism" — deep peacock-teal walls (she chose these over near-black), burnt-orange velvet panels, neon accents, brass/copper frames, a gallery wall, plum accent panels. Keep text readable.
 
 ## How it is built
 Plain static HTML + one CSS file. No framework, no build step, no JavaScript.

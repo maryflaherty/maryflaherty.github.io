@@ -4,11 +4,11 @@
    ========================================================================== */
 
 :root {
-  --wall: #141116;          /* charcoal-black walls */
-  --wall-2: #1c1820;        /* panels */
-  --wall-3: #262028;        /* raised panels */
+  --wall: #10302f;          /* deep peacock-teal walls */
+  --wall-2: #173d3b;        /* panels */
+  --wall-3: #1d4947;        /* raised panels */
   --ink: #f1e8dc;           /* main text */
-  --muted: #c4b6a6;         /* secondary text */
+  --muted: #c9d3c8;         /* secondary text */
   --velvet: #d8742a;        /* burnt-orange sofa */
   --velvet-deep: #a9501a;
   --neon: #ff9a5c;          /* neon tube core */
@@ -30,52 +30,12 @@
 
   --heading: #ffe9d8;
   --heading-glow: 0 0 18px rgba(255, 90, 60, 0.45);
-  --header-bg: linear-gradient(rgba(20, 17, 22, 0.92), rgba(20, 17, 22, 0.82));
-  --frame-gap: #120f0c;
+  --header-bg: linear-gradient(rgba(16, 48, 47, 0.95), rgba(16, 48, 47, 0.85));
+  --frame-gap: #0b201f;
   --line-hi: rgba(255, 255, 255, 0.025);
   --line-lo: rgba(0, 0, 0, 0.25);
   color-scheme: dark;
 }
-
-/* --------------------------------------------------------------------------
-   Wall-color options (trial). Set with <html data-theme="...">.
-   -------------------------------------------------------------------------- */
-/* Peacock: deep teal-green walls */
-[data-theme="peacock"] {
-  --wall: #10302f; --wall-2: #173d3b; --wall-3: #1d4947;
-  --muted: #c9d3c8;
-  --header-bg: linear-gradient(rgba(16, 48, 47, 0.95), rgba(16, 48, 47, 0.85));
-  --frame-gap: #0b201f;
-}
-[data-theme="peacock"] .frame--teal { background: linear-gradient(160deg, #4a2140, #33162c); }
-
-/* Plum: oxblood / aubergine walls */
-[data-theme="plum"] {
-  --wall: #2b1424; --wall-2: #361a2d; --wall-3: #42213a;
-  --muted: #d6c2c4;
-  --header-bg: linear-gradient(rgba(43, 20, 36, 0.95), rgba(43, 20, 36, 0.85));
-  --frame-gap: #1c0c17;
-}
-
-/* Paper: warm watercolor-paper walls, light and airy */
-[data-theme="paper"] {
-  --wall: #f2e9da; --wall-2: #fffaf1; --wall-3: #f7eedf;
-  --ink: #2b1d15; --muted: #5c483a;
-  --heading: #2b1d15; --heading-glow: none;
-  --link: #a4461a; --brass: #9a7628; --brass-dark: #c9a24a;
-  --header-bg: linear-gradient(rgba(242, 233, 218, 0.96), rgba(242, 233, 218, 0.9));
-  --frame-gap: #fffaf1;
-  --line-hi: rgba(255, 255, 255, 0.5); --line-lo: rgba(120, 90, 50, 0.08);
-  color-scheme: light;
-}
-[data-theme="paper"] body { background-image: radial-gradient(60rem 30rem at 85% -5%, rgba(216, 116, 42, 0.12), transparent 60%), radial-gradient(50rem 30rem at 0% 20%, rgba(95, 191, 179, 0.12), transparent 60%), repeating-linear-gradient(90deg, transparent 0 180px, var(--line-hi) 180px 182px, transparent 182px 186px, var(--line-lo) 186px 188px); }
-[data-theme="paper"] a:hover { color: #7a2f0e; }
-[data-theme="paper"] .neon { color: var(--velvet-deep); text-shadow: none; animation: none; }
-[data-theme="paper"] .neon--pink { color: #b0326e; }
-[data-theme="paper"] .stat .num { text-shadow: none; color: var(--velvet-deep); }
-[data-theme="paper"] .frame { box-shadow: 0 0 0 5px var(--frame-gap), 0 0 0 7px var(--brass-dark), 0 18px 30px -14px rgba(60, 40, 20, 0.35); }
-[data-theme="paper"] .nav a[aria-current="page"] { color: var(--velvet-deep); border-bottom-color: var(--velvet-deep); }
-[data-theme="paper"] .callout { background: rgba(255, 111, 174, 0.08); }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -238,7 +198,8 @@ p { margin: 0 0 1rem; }
 .frame--velvet a { color: #2a1206; font-weight: 600; }
 .frame--velvet a:hover { color: #000; }
 .frame--velvet .kicker { color: #3a1a08; }
-.frame--teal { background: linear-gradient(160deg, #1f3b3a, #172726); color: #f1e8dc; }
+/* named "teal" historically; on teal walls this accent panel is plum for contrast */
+.frame--teal { background: linear-gradient(160deg, #4a2140, #33162c); color: #f1e8dc; }
 .frame--teal a { color: #ffb37a; }
 .frame--leopard {
   border-width: 8px;
