@@ -22,7 +22,10 @@ Her CV (Nov 2026), lab site https://publish.illinois.edu/childsrl-shs/, her teac
 `bash ~/website/preview.sh` then open http://localhost:8080 (Ctrl+C stops it).
 
 ## Publish
-Not set up yet (tutorial outcome 6).
+Hosted on GitHub Pages from the public repository github.com/maryflaherty/maryflaherty.github.io (branch `main`, site root).
+Live address: https://maryflaherty.github.io/
+Publish with one command: `bash ~/website/publish.sh "what changed"` (commits and pushes; live about a minute later).
+GitHub CLI is at `~/.local/bin/gh`, signed in as maryflaherty through her browser. Always show her the change locally and get her yes before running publish.sh.
 
 ## Her wishes / what stays OFF the site
 - No students' names anywhere (publications show her role — lead/sole/senior/co-author — instead of author lists).

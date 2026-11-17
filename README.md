@@ -14,7 +14,10 @@ Open an AI agent (such as Claude Code) in this folder and say, in plain words, w
 The agent will show you the change on your computer before anything goes online.
 
 ## Publish
-Not set up yet. Once it is, the steps will be written here.
+Your site lives at https://maryflaherty.github.io/ (hosted free by GitHub Pages).
+To put changes online, ask your agent to publish, or in Terminal type:
+`bash ~/website/publish.sh "what changed"`
+The live site updates about a minute later.
 
 ## Undo
 Every saved version is kept, so any change can be undone. Just ask the agent to go back to an earlier version.
