@@ -87,11 +87,10 @@ p { margin: 0 0 1rem; }
   gap: 0.5rem 1.5rem; padding-block: 0.9rem;
 }
 .sig {
-  font-family: var(--script); font-size: 2.3rem; line-height: 1; text-decoration: none;
-  color: #ffe2cc;
-  text-shadow: 0 0 4px var(--neon), 0 0 12px var(--neon-glow), 0 0 24px var(--neon-glow);
+  font-family: var(--display); font-size: 1.15rem; font-weight: 600; line-height: 1.2; text-decoration: none;
+  letter-spacing: 0.04em; color: var(--brass);
 }
-.sig:hover { color: #fff; }
+.sig:hover { color: var(--ink); }
 
 .nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; }
 .nav a {
@@ -141,6 +140,26 @@ p { margin: 0 0 1rem; }
 .hero .lede { max-width: 60ch; color: var(--muted); font-size: 1.08em; }
 .hero .stars { position: absolute; inset: 0; pointer-events: none; }
 .star { position: absolute; color: var(--brass); font-size: 1.4rem; opacity: 0.8; }
+
+/* Home hero, painting-led: the art is the focus, the name is a quiet byline */
+.hero--painting {
+  display: grid; gap: clamp(2rem, 5vw, 4.5rem); align-items: center;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+}
+.hero-art { max-width: 30rem; justify-self: center; }
+.hero-art figcaption { margin-top: 0.75rem; }
+.byline {
+  font-family: var(--display); font-weight: 400; font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  text-transform: uppercase; letter-spacing: 0.22em; color: var(--brass); margin: 0;
+}
+.hero--painting .tagline {
+  font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.7rem); line-height: 1.2; max-width: 22ch; margin: 1rem 0 1.25rem;
+  color: #ffeedd;
+}
+@media (max-width: 760px) {
+  .hero--painting { grid-template-columns: 1fr; }
+  .hero-art { max-width: 22rem; }
+}
 
 .page-hero { padding-block: clamp(2rem, 5vw, 4rem) 1.5rem; }
 .page-hero h1 {
