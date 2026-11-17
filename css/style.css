@@ -27,8 +27,55 @@
 
   --gap: clamp(1rem, 2.5vw, 1.75rem);
   --radius: 4px;
+
+  --heading: #ffe9d8;
+  --heading-glow: 0 0 18px rgba(255, 90, 60, 0.45);
+  --header-bg: linear-gradient(rgba(20, 17, 22, 0.92), rgba(20, 17, 22, 0.82));
+  --frame-gap: #120f0c;
+  --line-hi: rgba(255, 255, 255, 0.025);
+  --line-lo: rgba(0, 0, 0, 0.25);
   color-scheme: dark;
 }
+
+/* --------------------------------------------------------------------------
+   Wall-color options (trial). Set with <html data-theme="...">.
+   -------------------------------------------------------------------------- */
+/* Peacock: deep teal-green walls */
+[data-theme="peacock"] {
+  --wall: #10302f; --wall-2: #173d3b; --wall-3: #1d4947;
+  --muted: #c9d3c8;
+  --header-bg: linear-gradient(rgba(16, 48, 47, 0.95), rgba(16, 48, 47, 0.85));
+  --frame-gap: #0b201f;
+}
+[data-theme="peacock"] .frame--teal { background: linear-gradient(160deg, #4a2140, #33162c); }
+
+/* Plum: oxblood / aubergine walls */
+[data-theme="plum"] {
+  --wall: #2b1424; --wall-2: #361a2d; --wall-3: #42213a;
+  --muted: #d6c2c4;
+  --header-bg: linear-gradient(rgba(43, 20, 36, 0.95), rgba(43, 20, 36, 0.85));
+  --frame-gap: #1c0c17;
+}
+
+/* Paper: warm watercolor-paper walls, light and airy */
+[data-theme="paper"] {
+  --wall: #f2e9da; --wall-2: #fffaf1; --wall-3: #f7eedf;
+  --ink: #2b1d15; --muted: #5c483a;
+  --heading: #2b1d15; --heading-glow: none;
+  --link: #a4461a; --brass: #9a7628; --brass-dark: #c9a24a;
+  --header-bg: linear-gradient(rgba(242, 233, 218, 0.96), rgba(242, 233, 218, 0.9));
+  --frame-gap: #fffaf1;
+  --line-hi: rgba(255, 255, 255, 0.5); --line-lo: rgba(120, 90, 50, 0.08);
+  color-scheme: light;
+}
+[data-theme="paper"] body { background-image: radial-gradient(60rem 30rem at 85% -5%, rgba(216, 116, 42, 0.12), transparent 60%), radial-gradient(50rem 30rem at 0% 20%, rgba(95, 191, 179, 0.12), transparent 60%), repeating-linear-gradient(90deg, transparent 0 180px, var(--line-hi) 180px 182px, transparent 182px 186px, var(--line-lo) 186px 188px); }
+[data-theme="paper"] a:hover { color: #7a2f0e; }
+[data-theme="paper"] .neon { color: var(--velvet-deep); text-shadow: none; animation: none; }
+[data-theme="paper"] .neon--pink { color: #b0326e; }
+[data-theme="paper"] .stat .num { text-shadow: none; color: var(--velvet-deep); }
+[data-theme="paper"] .frame { box-shadow: 0 0 0 5px var(--frame-gap), 0 0 0 7px var(--brass-dark), 0 18px 30px -14px rgba(60, 40, 20, 0.35); }
+[data-theme="paper"] .nav a[aria-current="page"] { color: var(--velvet-deep); border-bottom-color: var(--velvet-deep); }
+[data-theme="paper"] .callout { background: rgba(255, 111, 174, 0.08); }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -41,7 +88,7 @@ body {
   background-image:
     radial-gradient(60rem 30rem at 85% -5%, rgba(255, 111, 174, 0.10), transparent 60%),
     radial-gradient(50rem 30rem at 0% 20%, rgba(95, 191, 179, 0.07), transparent 60%),
-    repeating-linear-gradient(90deg, transparent 0 180px, rgba(255, 255, 255, 0.025) 180px 182px, transparent 182px 186px, rgba(0, 0, 0, 0.25) 186px 188px);
+    repeating-linear-gradient(90deg, transparent 0 180px, var(--line-hi) 180px 182px, transparent 182px 186px, var(--line-lo) 186px 188px);
   background-attachment: fixed;
   color: var(--ink);
   font-family: var(--body);
@@ -79,7 +126,7 @@ p { margin: 0 0 1rem; }
    -------------------------------------------------------------------------- */
 .site-header {
   border-bottom: 1px solid rgba(201, 162, 74, 0.35);
-  background: linear-gradient(rgba(20, 17, 22, 0.92), rgba(20, 17, 22, 0.82));
+  background: var(--header-bg);
   position: relative; z-index: 2;
 }
 .site-header .wrap {
@@ -154,7 +201,7 @@ p { margin: 0 0 1rem; }
 }
 .hero--painting .tagline {
   font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.7rem); line-height: 1.2; max-width: 22ch; margin: 1rem 0 1.25rem;
-  color: #ffeedd;
+  color: var(--heading);
 }
 @media (max-width: 760px) {
   .hero--painting { grid-template-columns: 1fr; }
@@ -164,7 +211,7 @@ p { margin: 0 0 1rem; }
 .page-hero { padding-block: clamp(2rem, 5vw, 4rem) 1.5rem; }
 .page-hero h1 {
   font-family: var(--display); font-size: clamp(2.4rem, 1.6rem + 3.5vw, 4.4rem); margin: 0 0 0.75rem;
-  color: #ffe9d8; text-shadow: 0 0 18px rgba(255, 90, 60, 0.45);
+  color: var(--heading); text-shadow: var(--heading-glow);
 }
 .page-hero p { max-width: 62ch; color: var(--muted); font-size: 1.08em; }
 
@@ -176,7 +223,7 @@ p { margin: 0 0 1rem; }
   background: var(--wall-2);
   border: 3px solid var(--brass);
   box-shadow:
-    0 0 0 5px #120f0c,
+    0 0 0 5px var(--frame-gap),
     0 0 0 7px var(--brass-dark),
     0 22px 40px -12px rgba(0, 0, 0, 0.75);
   padding: clamp(1.1rem, 2.5vw, 1.75rem);
@@ -191,7 +238,8 @@ p { margin: 0 0 1rem; }
 .frame--velvet a { color: #2a1206; font-weight: 600; }
 .frame--velvet a:hover { color: #000; }
 .frame--velvet .kicker { color: #3a1a08; }
-.frame--teal { background: linear-gradient(160deg, #1f3b3a, #172726); }
+.frame--teal { background: linear-gradient(160deg, #1f3b3a, #172726); color: #f1e8dc; }
+.frame--teal a { color: #ffb37a; }
 .frame--leopard {
   border-width: 8px;
   border-image: repeating-radial-gradient(circle at 6px 6px, #3b2410 0 3px, #c9893c 3px 6px, #e0b067 6px 10px) 12;
@@ -298,7 +346,7 @@ figure { margin: 0; }
 }
 .stat .num {
   display: block; font-family: var(--display); font-weight: 700; font-size: 2.6rem; line-height: 1;
-  color: #ffe9d8; text-shadow: 0 0 10px var(--neon-glow);
+  color: var(--heading); text-shadow: 0 0 10px var(--neon-glow);
 }
 .stat .lbl { display: block; color: var(--muted); font-size: 0.92rem; margin-top: 0.35rem; }
 .stat--pink .num { text-shadow: 0 0 10px var(--pink); }

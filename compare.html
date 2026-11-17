@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- TEMPORARY: side-by-side wall-color comparison. Not linked from the site; delete before publishing. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wall colors</title>
+  <style>
+    body { margin: 0; background: #ddd; font-family: system-ui, sans-serif; }
+    h1 { font-size: 1.1rem; margin: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(560px, 1fr)); gap: 1rem; padding: 0 1rem 2rem; }
+    .opt { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+    .opt h2 { font-size: 1rem; margin: 0; padding: .6rem .9rem; }
+    .opt p { margin: 0 .9rem .6rem; font-size: .9rem; color: #444; }
+    iframe { width: 100%; height: 640px; border: 0; display: block; }
+  </style>
+</head>
+<body>
+  <h1>Wall colors: scroll inside each one to see more</h1>
+  <div class="grid">
+    <div class="opt"><h2>A. Charcoal (current)</h2><p>Near-black walls.</p><iframe src="index.html" data-theme=""></iframe></div>
+    <div class="opt"><h2>B. Peacock</h2><p>Deep teal-green walls, still moody.</p><iframe src="index.html" data-theme="peacock"></iframe></div>
+    <div class="opt"><h2>C. Plum</h2><p>Oxblood-aubergine walls, warm and rich.</p><iframe src="index.html" data-theme="plum"></iframe></div>
+    <div class="opt"><h2>D. Paper</h2><p>Light, warm watercolor-paper walls.</p><iframe src="index.html" data-theme="paper"></iframe></div>
+  </div>
+  <script>
+    document.querySelectorAll('iframe').forEach(f => {
+      const set = () => { const t = f.dataset.theme; if (t) f.contentDocument.documentElement.dataset.theme = t; };
+      f.addEventListener('load', set);
+    });
+  </script>
+</body>
+</html>
