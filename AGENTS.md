@@ -6,6 +6,7 @@ This site was made with the Educators Who Build tutorial "professional-website".
 A personal professional website for Mary Flaherty, Associate Professor of Speech and Hearing Science at the University of Illinois Urbana-Champaign, director of the Child Speech Research Lab. Audience: a broad audience of intellectually curious people, not only specialists. Visitors should understand what she works on and why it matters across teaching, research, and personal interests (live music, reading, making art). Written in the first person.
 
 Look and feel: "moody maximalism" — deep peacock-teal walls (she chose these over near-black), burnt-orange velvet panels, neon accents, brass/copper frames, a gallery wall, plum accent panels. Keep text readable.
+Neon signs are for ideas and section titles only ("Listen closely", "Live Music", "How do we know?"); she does NOT want her name in neon. Home page leads with her streetcar painting; her name is a quiet brass byline.
 
 ## How it is built
 Plain static HTML + one CSS file. No framework, no build step, no JavaScript.
@@ -26,6 +27,8 @@ Hosted on GitHub Pages from the public repository github.com/maryflaherty/maryfl
 Live address: https://maryflaherty.github.io/
 Publish with one command: `bash ~/website/publish.sh "what changed"` (commits and pushes; live about a minute later).
 GitHub CLI is at `~/.local/bin/gh`, signed in as maryflaherty through her browser. Always show her the change locally and get her yes before running publish.sh.
+`_config.yml` keeps these notes files and scripts off the live site; add any new non-site file to its exclude list.
+No custom domain (she decided "not now", Nov 2026). Hosting costs nothing.
 
 ## Her wishes / what stays OFF the site
 - No students' names anywhere (publications show her role — lead/sole/senior/co-author — instead of author lists).
