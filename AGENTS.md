@@ -33,7 +33,7 @@ GitHub CLI is at `~/.local/bin/gh`, signed in as maryflaherty through her browse
 - No CV download for now. No photo of her for now. No lab phone number. No grant numbers.
 - No exact Phish show dates or setlists — summary stats only.
 - Public emails: maryflah@illinois.edu and child-SRL@illinois.edu.
-- Paintings left off on purpose: the "S Larch Pl" street-sign house and the dog-on-bed painting (could reveal home details).
+- Some of her paintings are left off on purpose for privacy; ask her before adding any new painting.
 
 ## Rules that still apply
 - Nothing goes public until she has seen it on her own computer and said yes to that publish.

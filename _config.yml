@@ -1,0 +1,7 @@
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - README.md
+  - publish.sh
+  - preview.sh
+  - server.log

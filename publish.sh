@@ -5,5 +5,5 @@
 cd "$(dirname "$0")" || exit 1
 msg="${1:-Update website}"
 git add -A
-git -c user.name="Mary Flaherty" -c user.email="maryflah@illinois.edu" commit -q -m "$msg" 2>/dev/null || true
+git -c user.name="Mary Flaherty" -c user.email="maryflah@illinois.edu" commit -q -m "$msg" >/dev/null 2>&1 || true
 git push -q origin main && echo "Published. Live in about a minute at https://maryflaherty.github.io/"
