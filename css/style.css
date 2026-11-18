@@ -430,3 +430,5 @@ figure { margin: 0; }
 .book:nth-child(9n+9) { margin-top: 2.7rem; }
 .shelf--now .book:nth-child(1) { margin-top: 1.5rem; }
 .shelf--now .book:nth-child(2) { margin-top: 3rem; }
+.shelf--now .book:nth-child(3) { background: #24485a; height: 14.5rem; margin-top: 2rem; }
+.shelf--now .book:nth-child(4) { background: #3b2e5a; height: 16rem; margin-top: 0.5rem; }
